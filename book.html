@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <style>
+        #header {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #navbar {
+          color : blue
+
+        }
+
+        #content {
+
+        }
+
+        #footer {
+          color : red
+        }
+
+        div#moana {
+          color : grey
+        }
+
+        div#beauty_and_the_beast {
+          color : darkblue
+
+        }
+
+        img{
+          height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">안녕하세요. 이 페이지는 BOOK 페이지 입니다.</div>
+    <hr>
+    <div id="navbar">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">BOOK</a></li>
+            <li><a href="./album.html">ALBUM</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <hr>
+    <div id="content">
+        <div id="moana" class="book product">
+          <div class="name"></div>
+          <div class="category"></div>
+          <div class="price"></div>
+          <div>
+            <img class="picture"> </div>
+          <div class="keywords"></div>
+        </div>
+        <div id="beauty_and_the_beast" class="book product">
+          <div class="name"> </div>
+          <div class="category"> </div>
+          <div class="price"></div>
+          <div class="picture">
+            <img src="http://bimage.interpark.com/goods_image/5/7/5/9/210065759h.jpg"> </div>
+          <div class="keywords"></div>
+
+            <div id="La_la_land" class="album product">
+              <div class="name"></div>
+              <div class="category"></div>
+              <div class="price"></div>
+              <div class="picture">
+                <img src="http://bimage.interpark.com/goods_image/4/1/0/4/262724104s.jpg"> </div>
+              <div class="keywords"></div>
+            </div>
+            <div id="My_voice" class="album product">
+              <div class="name"></div>
+              <div class="category"></div>
+              <div class="price"></div>
+              <div class="picture">
+                <img src="http://bimage.interpark.com/goods_image/5/5/7/1/265315571s.jpg"> </div>
+              <div class="keywords"></div>
+    </div>
+    <hr>
+    <div id="footer">
+       여기까지 읽어주셔서 감사합니다. BOOK 페이지 였습니다.
+    </div>
+
+<script>
+let book1 = {
+  id : 'book_1' ,
+  name : 'moana' ,
+  category : '도서' ,
+  picture_url : 'http://bimage.interpark.com/goods_image/4/6/5/6/263434656h.jpg' ,
+  price : 8300 ,
+  selling_points : ['어린이' , '외국도서', '디즈니', 'tv', '영화', '스토리북']
+}
+let book2 = {
+  id : 'book_2' ,
+  name : '미녀와 야수' ,
+  category : '도서' ,
+  picture_url : 'http://bimage.interpark.com/goods_image/5/7/5/9/210065759h.jpg' ,
+  price : 18000 ,
+  selling_points : ['영어회화', '미드', '스크린', '야수', '벨', '모리스']
+}
+
+let album1 = {
+  id : 'album_1' ,
+  name : '라라랜드' ,
+  category : '음반' ,
+  picture_url : 'http://bimage.interpark.com/goods_image/4/1/0/4/262724104s.jpg' ,
+  price : 18200 ,
+  selling_points : ['외국영화', '드라마', '사랑', '희망', '열정']
+}
+
+let album2 = {
+  id : 'album_2' ,
+  name : '태연 - My_voice' ,
+  category : '음반' ,
+  picture_url : 'http://bimage.interpark.com/goods_image/5/5/7/1/265315571s.jpg' ,
+  price : 20200 ,
+  selling_points : ['가요',  'R&B', '발라드', '소녀시대']
+}
+
+$('#moana .name').text(book1.name)
+$('#moana .category').text(book1.category)
+$('#moana .price').text(book1.price)
+$('#moana .picture').attr('src' , book1.picture_url)
+$('#moana .keywords').text(book1.selling_points)
+
+
+$('#beauty_and_the_beast .name').text(book2.name)
+$('#beauty_and_the_beast .category').text(book2.category)
+$('#beauty_and_the_beast .price').text(book2.price)
+$('#beauty_and_the_beast .picture').attr('src' , book2.picture_url)
+$('#beauty_and_the_beast .keywords').text(book2.selling_points)
+
+
+$('#La_la_land .name').text(album1.name)
+$('#La_la_land .category').text(album1.category)
+$('#La_la_land .price').text(album1.price)
+$('#La_la_land .picture').attr('src' , album1.picture_url)
+$('#La_la_land .keywords').text(album1.selling_points)
+
+
+$('#My_voice .name').text(album2.name)
+$('#My_voice .category').text(album2.category)
+$('#My_voice .price').text(album2.price)
+$('#My_voice .picture').attr('src' , album2.picture_url)
+$('#My_voice .keywords').text(album2.selling_points)
+</script>
+
+</body>
+
+</html>
